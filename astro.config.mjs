@@ -6,4 +6,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://Alisa-Leung.github.io',
   base: '/Blog',
+  trailingSlash: 'always'
 });
