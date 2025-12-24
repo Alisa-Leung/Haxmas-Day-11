@@ -1,19 +1,19 @@
 :root {
-	--bg: #f4f0ff;
-	--surface: #ffffff;
-	--border: #d7d3e5;
+	--bg: #fff8e7;
+	--surface: #ffeaea;
+	--border: #f5cbcb;
 	--text: #1f1c2e;
 	--muted: #4a4761;
 	--muted-2: #6a6a7a;
-	--accent: #5145b7;
-	--accent-strong: #322a53;
+	--accent: #f2aebb;
+	--accent-strong: #f7a5a5;
 	--max-width: 960px;
 }
 
 body {
 	margin: 0;
-	font-family: 'Inter', sans-serif;
-	background: var(--bg);
+	font-family: 'Pixelify Sans';
+	background-color: var(--bg);
 	color: var(--text);
 	line-height: 1.6;
 }
@@ -58,22 +58,38 @@ article {
 .page-shell {
 	min-height: 100vh;
 	width: 100%;
-	background: var(--bg);
+	background-color: var(--surface);
+}
+
+.page-page {
+	min-height: 100vh;
+	width: 100%;
+	background-color: var(--surface);
 }
 
 .page-header {
 	text-align: center;
 	max-width: var(--max-width);
-	width: 100%;
+	width: 30%;
+	margin: 0 auto 16px;
+	background-color: var(--bg);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header-header {
+	text-align: center;
+	max-width: var(--max-width);
+	width: 30%;
 	margin: 0 auto 16px;
 }
 
-.page-header h1 {
+.page-header h1 .header-header h1{
 	margin: 30px 0 10px;
 	font-size: 2.5rem;
 }
 
-.page-header .tagline {
+.page-header .tagline .header-header{
 	font-size: 1.1rem;
 	color: var(--muted);
 }
@@ -113,11 +129,15 @@ article {
 }
 
 .post-card {
-	background: var(--surface);
+	background: var(--bg);
 	padding: 20px 18px 22px;
-	border: 1px solid var(--border);
+	border-radius: 8px;
 	color: var(--text);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.post-card:hover{
+	transform: translateY(-2px);
 }
 
 .post-card .title-link {
@@ -131,6 +151,7 @@ article {
 .post-card .title-link:hover {
 	color: var(--accent);
 	text-decoration: underline;
+	text-decoration-style: wavy;
 }
 
 .post-card .description {
@@ -151,14 +172,18 @@ article {
 	display: inline-block;
 	margin: 40px auto;
 	padding: 12px 24px;
-	background: var(--accent);
-	color: #fff;
+	background: var(--accent-strong);
+	color: var(--bg);
 	font-weight: 600;
 	border-radius: 8px;
-	transition: background 150ms ease;
+	border: 2px solid;
+	transition: all 150ms ease;
 }
 
 .posts-link:hover {
-	color: #fff;
-	background: var(--accent-strong);
+	color: var(--accent-strong);
+	background: var(--bg);
+	border-color: var(--accent-strong);
+	border: 2px solid;
+	cursor: pointer;
 }

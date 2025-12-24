@@ -8,10 +8,11 @@ const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
-<div class="posts-page page-shell">
-    <header class="page-header">
-        <h1>Alisa's Blogs!</h1>
-        <p class="tagline">Pretty cool blogs if you ask me.</p>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<div class="posts-page page-page">
+    <header class="header-header">
+        <h1>Blog Posts</h1>
+        <p class="tagline">Pretty cool blog if you ask me! :)</p>
     </header>
     {posts.length === 0 && <p class="empty">No posts yet :()</p>}
     <div class="posts">
