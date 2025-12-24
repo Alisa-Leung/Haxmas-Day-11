@@ -7,6 +7,7 @@ import '../../styles/global.css';
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const base = import.meta.env.BASE_URL;
 ---
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 <div class="posts-page page-page">
@@ -18,7 +19,7 @@ const posts = (await getCollection('blog')).sort(
     <div class="posts">
         {posts.map((post) => (
             <article class="post-card">
-                <a href={`/posts/${post.id}`} class="title-link">
+                <a href={`${base}posts/${post.id}`} class="title-link">
                     {post.data.title}
                 </a>
                 <p class="description">{post.data.description}</p>
